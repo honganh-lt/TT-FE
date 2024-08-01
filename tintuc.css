@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: "Asap", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 1.1rem;
+}
+
+#header-nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #000;
+    text-decoration: none;
+}
+
+#header-nav ul li {
+    margin-left: 2.6rem;
+    position: relative;
+}
+/*
+#header-nav ul li::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    width: 70%;
+    height: 0.2rem;
+    background-color: #bd945f;
+}
+*/
+#header-nav ul li::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    height: 4px;
+    width: 70%;
+    left: 40%;
+    transform: translate(-50%);
+    background-color: #bd945f;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+#header-nav ul li:hover::after{
+    width: 70%;
+    opacity: 1;
+}
+#header-nav .fa-solid {
+    visibility: hidden;
+}
+
+@media (min-width: 2400px) {
+
+    .container .container-lg,
+    .container-md .container-sm,
+    .container-x,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 767.98px) and (max-width: 999.98px) {
+    #header-nav ul li {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        position: relative;
+    }
+
+    #header-nav ul {
+        display: block !important;
+    }
+
+    #header-nav .fa-solid {
+        visibility: visible;
+    }
+
+    /* 
+    body{
+        position: relative;
+    }
+    #header-menu li{
+        width: 100%;
+    }*/
+    #header-menu {
+        /*
+        position: absolute;
+        top: 20%;
+        left: 50%;*/
+        display: none;
+    }
+
+    .header-logo {
+        height: 48px;
+    }
+}
+
+.row {
+    max-width: 100%;
+    display: flex;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.container-x {
+    margin: 0 2.5rem;
+}
+
+.w-100{
+    width: 100% !important;
+}
+.h-100 {
+    height: 100% !important;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.col-3 {
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+/*Category*/
+#category {
+    background-color: #f3f3f3;
+    height: 95rem;
+}
+#category #list-category {
+    background-color: #fff;
+    height: 91rem;
+    position: relative;
+    top: 4rem;
+}
+#category h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #2c2e53;
+    text-transform: uppercase;
+    font-family: "Asap", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 5rem;
+    line-height: 2.5rem;
+}
+
+#category h2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translateY(-44%);
+    width: 8rem;
+    height: 0.5rem;
+    background-color: #bd945f;
+}
+
+#category .img .w-100 {
+    height: 18rem;
+    position: relative;
+    left: 1.2rem;
+
+}
+.category-content{
+    position: relative;
+    width: 100%;
+    margin-left: 1.2rem;
+}
+.category-title {
+    font-size: 1rem;
+    font-family: "Asap", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0.6rem auto 0.3rem;
+    text-align: center;
+    color: #bd945f;
+    text-align: justify;
+}
+.category-content p{
+    font-size: 0.7rem;
+    font-family: "Asap", sans-serif;
+    font-weight: 500;
+    margin: 0.6rem auto 0.3rem;
+    text-align: center;
+    color: #000;
+    text-align: justify;
+    padding-bottom: 1.3rem;
+}
+
+.box-category>div {
+    width: 100% !important;
+    position: relative;
+    top: -3rem;
+}
+.box-category.col-3{
+    width: 32%;
+}
+/*
+.container #list-category {
+    margin: auto;
+}*/
+#category .container {
+    position: relative;
+}
+.category-items .box-category{
+    display: inline-block;
+}
+button.slick-prev.slick-arrow{
+    opacity: 0;
+}
+
+button.slick-next.slick-arrow{
+    opacity: 0;
+}
+ul.slick-dots{
+    position: relative;
+    top: -3rem;
+}
+ul.slick-dots li {
+    background-color: #dedddd;
+    padding: 2px 5px;
+    color: #fff;
+    height: 1.6rem;
+}
+ul.slick-dots li:hover{
+    background-color: #d59808;
+    color: #000;
+}
+
+/*Footer*/
+#footer{
+    background-color: #2a2a2d;
+}
+#footer .box-footer{
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+#footer .footer-left{
+    width: 40%;
+}
+#footer .footer-left-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-left-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-left h5{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#footer .footer-left-menu-icon li{
+    list-style: none;
+}
+#footer .footer-left-menu-icon li a{
+    text-decoration: none;
+    color: #fff;
+}
+#footer .footer-left-menu-icon li a i{
+    padding-right: 1rem;
+    font-size: 0.9rem;
+}
+#footer .footer-left-menu-icon li a span{
+    font-size: 0.8rem;
+}
+
+#footer .footer-mid{
+    width: 40%;
+    margin-left: 10rem;
+}
+#footer .footer-mid-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-mid-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-mid .footer-mid-menu li a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: #fff;
+}
+
+#footer .footer-right{
+    width: 40%;
+}
+#footer .footer-right-top h2{
+    color: #fff;
+    font-size: 0.7rem;
+    position: relative;
+    text-transform: uppercase;
+}
+#footer .footer-right-top h2::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #fff;
+    z-index: 3;
+}
+#footer .footer-right-icon{
+    padding-top: 0.8rem;
+}
+#footer .footer-right-icon a img{
+    padding-right: 0.4rem;
+}
+#footer .footer-right-end{
+    padding-top: 2rem;
+}
